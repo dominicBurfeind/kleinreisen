@@ -1,0 +1,419 @@
+/*Universal styling*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit ,Helvetica, Arial;
+  background: linear-gradient(to bottom, #456cd899  0%, #2060a0ee  20%, #1e7cc9d5  160%);
+  padding: var(--spacing-medium);
+  letter-spacing: 1px;
+}
+
+
+/*Variables*/
+:root {
+  --font-size-extra-small: 10px;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --font-size-extra-large: 32px;
+  
+  --spacing-extra-small: 6px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+ 
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+
+  --black: #161616;
+  --white: #eee;
+
+  --background-color-primary: #75eaa978 ;   
+  --background-color-secondary: #75eaaaed;
+  --background-color-accent: #22f98393;
+  --background-color-alternative: ;
+}
+
+:hover {
+  transition: 0.15s ease;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 0.5px 1px 1px #00000032;
+  font-weight: 500;
+  color: white;
+}
+
+section,
+header,
+footer {
+  margin: 50px 0;
+}
+
+.svg-container svg {
+  width: 45px;
+  height: 45px;
+  margin: var(--spacing-small);
+  cursor: pointer;
+}
+
+
+
+/*Banner*/
+.banner {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: var(--border-radius-small);
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-extra-small);
+  padding: var(--spacing-small);
+}
+
+.datum-container {
+  padding: var(--spacing-small);
+  border: 1px solid rgba(255, 255, 255, 0.217);
+}
+
+.reiseziele-vorschau {
+  overflow: hidden;
+}
+
+#Top-reiseziele {
+  word-spacing: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 20s linear infinite;
+}
+
+
+
+/*Header / Reiseziel hinzufügen*/
+h1 {
+  font-size: var(--font-size-large);
+  padding: var(--spacing-small);
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap-reverse;
+}
+
+.reise-creator-container,
+.geplante-reisen-content,
+.kalender-content,
+.abgechlossene-reisen {
+  padding: var(--spacing-small);
+  border: 2px solid #ffffff7e;
+  background: linear-gradient(to bottom, #4d84c7 60%, #0000000f 160%); 
+  color: white;
+  box-shadow: 2px 2px 1px #0000001f;
+  border-radius: var(--border-radius-small);
+}
+
+.reise-creator-container input,
+.reise-creator-container select,
+.geplante-reisen-content tr input,
+.abgeschlossene-reise-ziele input,
+#Reise-erstellen {
+  
+  box-shadow: inset 4px 4px 4px #54545413;
+  background: #dfdfdfd9;
+  border: 1px solid #00000048;
+  color: black;
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-extra-small);
+  margin: var(--spacing-small);
+}
+
+#Reise-erstellen {
+  width: 100px;
+  margin: 20px auto;
+  cursor: pointer;
+  padding: var(--spacing-medium);
+  background-color: #ffffff00;
+  color: white;
+  border-color: white;
+}
+
+#Reise-erstellen:hover {
+  background-color: #ffffff1c;
+  border-color: black;
+}
+
+.reise-creator-container input::placeholder {
+  color: black;
+}
+
+.reise-creator-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: var(--spacing-medium);
+  width: 300px;
+}
+
+
+
+
+
+/*Geplante Reisen*/
+.geplante-reisen-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h2 {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-large);
+}
+
+.geplante-reisen-content th,
+.abgechlossene-reisen table th {
+  font-size: var(--font-size-small);
+  font-weight: 200;
+  padding: 5px;
+}
+
+.geplante-reisen-content table input {
+  text-align: center;
+}
+
+.reise-zeile {
+  display: none;
+}
+
+.reise-zeile td svg {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  color: rgba(255, 255, 255, 0.921);
+}
+
+
+
+
+/*Abgeschloßene Reisen*/
+.abgechlossene-reisen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.abgechlossene-reisen table th {
+  font-size: var(--font-size-small);
+  font-weight: 200;
+  text-align: center;
+}
+
+#Abgeschlossene-reisen-tabelle {
+  margin-top: var(--spacing-extra-large);
+}
+
+.abgechlossene-reisen table input {
+  width: 20vw;
+  text-align: center;
+}
+
+.abgeschlossene-reise-ziele {
+  display: none;
+}
+
+
+/*footer*/
+footer {
+  position: fixed;
+  bottom: -35px ;
+  right: 10px;
+  background: linear-gradient(to bottom, #256bc1 60%, #69809c 160%); 
+  color: white;
+  border: 1.5px solid rgba(0, 0, 0, 0.344);
+  border-radius: var(--border-radius-medium);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.karte-svg {
+  color: #5dff5dca;
+  cursor: pointer;
+}
+
+.karte-svg:hover {
+  color: #9eff9e6d;
+}
+
+.wunschliste-svg {
+  color: #fcfc0dd1;
+  cursor: pointer;
+}
+
+.wunschliste-svg:hover {
+  color: #ffff6a75;
+}
+
+
+
+/*Menu*/
+.menue {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+
+
+/*Wunschliste*/ 
+.wunschliste {
+  border-radius: var(--border-radius-large);
+  width: 50%;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background: linear-gradient(to bottom, #4d84c7 60%, #2760a7 160%); 
+  border: 1.5px solid #000000be;
+  display: none;
+}
+
+.wunschliste.toggle {
+  display: block;
+}
+
+.wunschliste-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spacing-small) 0px;
+}
+
+.wunschliste-top svg {
+  color: #fffc37;
+  width: 15px;
+}
+
+.wunschort {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.254);
+  padding: var(--spacing-extra-small);
+  width: 70%;
+  margin: var(--spacing-extra-small) auto;
+  text-align: center;
+  background: none;
+  color: white;
+}
+
+.wunschliste-ort {
+  border-top: 1px solid rgba(0, 0, 0, 0.431);
+  padding: var(--spacing-large);
+}
+
+
+
+/*Karte*/
+.karte {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 200px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(to bottom, #4d84c7 60%, #2760a7 160%); 
+  border: 1.5px solid #000000be;
+  display: none;
+}
+
+.karte.toggle {
+  display: flex;
+}
+
+.flag-icon {
+  position: relative;
+  left: 10px;
+}
+
+.karten-container {
+  width: 100%;
+}
+
+
+
+/*Media Querys*/
+@media screen and (max-width: 800px) {
+
+  /*Geplante reisen input*/
+  .geplante-reisen-content tr input {
+    width: 15vw;
+  }
+
+  .abgechlossene-reisen table th,
+  .geplante-reisen-content th {
+    font-size: var(--font-size-extra-small);
+  }
+
+  /*Banner*/
+  .banner-content {
+    font-size: 2vw;
+  }
+
+  /*Grauer Container text*/
+  .container-text,
+  .container-text-abgeschlossen,
+  .container-text-planen {
+    font-size: var(--font-size-extra-small);
+    opacity: 0.3;
+    text-align: center;
+    margin: 10px 0 20px 0;
+  }
+
+}
+
+/*Keyframes*/
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+
+
+
+
+
