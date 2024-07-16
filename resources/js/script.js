@@ -240,3 +240,45 @@ document.getElementById('Reise-container-content').addEventListener('submit', fu
   neuesZiel();
   resetInput();
 });
+
+
+//Leaflet Maps 
+ // Initialisiere die Karte und setze die Startansicht auf die Koordinaten (51.505, -0.09) und Zoomstufe 13
+ var map = L.map('map').setView([51.505, -0.09], 13);
+
+ // Füge eine OpenStreetMap-Kachel-Layer hinzu
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+ }).addTo(map);
+
+ // Füge einen Marker hinzu und binde ein Popup daran
+ L.marker([51.5, -0.09]).addTo(map)
+     .bindPopup('Ein schöner CSS3 Popup.<br> Einfach anpassbar.')
+     .openPopup();
+
+ // Füge einen Kreis hinzu
+ L.circle([51.508, -0.11], {
+     color: 'red',
+     fillColor: '#f03',
+     fillOpacity: 0.5,
+     radius: 500
+ }).addTo(map).bindPopup('Ich bin ein Kreis.');
+
+ // Füge ein Polygon hinzu
+ L.polygon([
+     [51.509, -0.08],
+     [51.503, -0.06],
+     [51.51, -0.047]
+ ]).addTo(map).bindPopup('Ich bin ein Polygon.');
+
+ // Popup auf Kartenklick hinzufügen
+ var popup = L.popup();
+
+ function onMapClick(e) {
+     popup
+         .setLatLng(e.latlng)
+         .setContent("Sie haben auf die Karte bei " + e.latlng.toString() + " geklickt.")
+         .openOn(map);
+ }
+
+ map.on('click', onMapClick);

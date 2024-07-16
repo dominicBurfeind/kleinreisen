@@ -139,7 +139,6 @@ h1 {
 
 .reise-creator-container input,
 .reise-creator-container select,
-.geplante-reisen-content tr input,
 .abgeschlossene-reise-ziele input,
 #Reise-erstellen {
   
@@ -204,8 +203,18 @@ h2 {
   padding: 5px;
 }
 
-.geplante-reisen-content table input {
+.geplante-reisen-content table input,
+.abgechlossene-reisen table input
+ {
   text-align: center;
+  font-size: var(--font-size-small);
+  color: #000000c3;
+  padding: var(--spacing-extra-small);
+  margin: 10px 5px 10px 5px ;
+  width: 180px;
+  box-shadow: inset 4px 4px 4px #54545413;
+  border: 1px solid #00000048;
+  border-radius: var(--border-radius-small);
 }
 
 .reise-zeile {
@@ -231,7 +240,6 @@ h2 {
 }
 
 .abgechlossene-reisen table th {
-  font-size: var(--font-size-small);
   font-weight: 200;
   text-align: center;
 }
@@ -240,10 +248,6 @@ h2 {
   margin-top: var(--spacing-extra-large);
 }
 
-.abgechlossene-reisen table input {
-  width: 20vw;
-  text-align: center;
-}
 
 .abgeschlossene-reise-ziele {
   display: none;
@@ -269,6 +273,11 @@ footer {
 .karte-svg {
   color: #5dff5dca;
   cursor: pointer;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
 }
 
 .karte-svg:hover {
@@ -348,15 +357,16 @@ footer {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 200px;
+  bottom: 50px;
   border-radius: var(--border-radius-large);
   background: linear-gradient(to bottom, #4d84c7 60%, #2760a7 160%); 
   border: 1.5px solid #000000be;
   display: none;
+  text-align: center;
 }
 
 .karte.toggle {
-  display: flex;
+  display: inline-block;
 }
 
 .flag-icon {
@@ -365,7 +375,7 @@ footer {
 }
 
 .karten-container {
-  width: 100%;
+  width: 700px;
 }
 
 
@@ -375,7 +385,12 @@ footer {
 
   /*Geplante reisen input*/
   .geplante-reisen-content tr input {
-    width: 15vw;
+    width: 90%;
+    font-size: var(--font-size-extra-small);
+  }
+
+  .abgechlossene-reisen table input {
+    width: 90%;
   }
 
   .abgechlossene-reisen table th,
