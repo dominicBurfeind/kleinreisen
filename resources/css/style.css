@@ -120,9 +120,13 @@ h1 {
 
 .header-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: start;
   flex-wrap: wrap-reverse;
+}
+
+.reise-creator-container {
+  width: 400px;
 }
 
 .reise-creator-container,
@@ -142,13 +146,20 @@ h1 {
 .abgeschlossene-reise-ziele input,
 #Reise-erstellen {
   
-  box-shadow: inset 4px 4px 4px #54545413;
-  background: #dfdfdfd9;
-  border: 1px solid #00000048;
+  box-shadow: 4px 4px 10px #54545490;
+  background: #f1f1f1;
+  border: 1px solid #ffffff48;
   color: black;
   border-radius: var(--border-radius-small);
   padding: var(--spacing-extra-small);
   margin: var(--spacing-small);
+}
+
+.reise-creator-container input::placeholder,
+.reise-creator-container select::placeholder,
+.abgeschlossene-reise-ziele input::placeholder,
+#Reise-erstellen::placeholder {
+  opacity: 0.4;
 }
 
 #Reise-erstellen {
@@ -156,26 +167,24 @@ h1 {
   margin: 20px auto;
   cursor: pointer;
   padding: var(--spacing-medium);
-  background-color: #ffffff00;
+  background-color: #ffffff1c;
   color: white;
-  border-color: white;
+  border-color: #000000b1;
 }
 
 #Reise-erstellen:hover {
   background-color: #ffffff1c;
-  border-color: black;
+  color: black;
+  box-shadow: 4px 5px 10px #070707c2;
 }
 
-.reise-creator-container input::placeholder {
-  color: black;
-}
 
 .reise-creator-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: var(--spacing-medium);
-  width: 300px;
+  width: 100%;
 }
 
 
@@ -183,6 +192,7 @@ h1 {
 
 
 /*Geplante Reisen*/
+
 .geplante-reisen-content {
   display: flex;
   flex-direction: column;
